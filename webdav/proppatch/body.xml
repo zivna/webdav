@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<d:multistatus xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
+    <d:response>
+        <d:href>{{itemID}}</d:href>
+    </d:response>
+</d:multistatus>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<d:prop xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
+    <d:lockdiscovery>
+        <d:activelock>
+            <d:lockscope>
+                <d:exclusive/>
+            </d:lockscope>
+            <d:locktype>
+                <d:write/>
+            </d:locktype>
+            <d:depth>infinity</d:depth>
+            <d:timeout>Second-1800</d:timeout>
+            <d:locktoken>
+                <d:href>opaquelocktoken:44445502-b52e-d247-4488-ba424fd2086c</d:href>
+            </d:locktoken>
+            <d:owner>&#60;D:href&#62;L-P-YURIG-ADSL\Ori&#60;/D:href&#62;</d:owner>
+        </d:activelock>
+    </d:lockdiscovery>
+</d:prop>
+
+

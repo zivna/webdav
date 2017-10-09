@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<d:error xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
+    <a:exception>NotAuthenticated</a:exception>
+    <a:message>No digest authentication headers were found</a:message>
+</d:error>
