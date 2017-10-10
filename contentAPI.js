@@ -40,23 +40,35 @@ class File
     }
 }
 
-var rootItem = { key: '/', name: 'root', type: 'collection', size: 0, modified: new Date(1980, 8, 13) };
+var rootItem = { key: '/root', name: 'root', type: 'collection', size: 0, modified: new Date(1980, 8, 13) };
+var childItem = { key: 'text.txt', name: 'text.txt', type: 'file', size: 0, modified: new Date(1980, 8, 13) };
+
 var api = {
     headers: {},
     get: function (key, callback)
     {
         logger.debug('fetching file');
 
-        if (key)
+        if (key == 'text.txt')
+        {
+            callback(null, childItem);
+        }
+        else if (key)
         {
             utils.get('http://{0}:12050/contentManagement/File/{1}'.format(backendURL, key), (error, response, body) => 
             {
                 logger.debug('fetching file complete ({{code}})', {code: response.statusCode});
 
                 if (response.statusCode == 200)
+                {
+                    logger.debug('file found ');
                     callback(null, new File(body));
+                }
                 else
+                {
+                    logger.debug('file not found - {{data}}', {data:body});
                     callback(body, null);
+                }
 
             }, api.headers);
         }
@@ -78,7 +90,7 @@ var api = {
         // });
 
         // return list;
-        return [];
+        return [childItem];
     },
     download: function (key, callback)
     {

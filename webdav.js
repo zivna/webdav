@@ -11,7 +11,7 @@ class WebdavResponse
         this.body = fs.readFileSync('./webdav/{0}/body.xml'.format(name), 'utf8');
     }
 
-    handle(request, response, data)
+    handle(request, response, data, callback)
     {
         this.setHeaders(request, response, { date: new Date() });
         var body = this.renderBody(request, response, data);
@@ -23,7 +23,7 @@ class WebdavResponse
         logger.debug('headers: {{_headers}}', response);
         logger.debug('body: {{body}}', {body:body});
 
-        return null
+        callback();
     }
     setBody(request, response, data)
     {
@@ -85,23 +85,23 @@ class WebdavResponsePut extends WebdavResponse
         this.api = api;
     }
 
-    handle(request, response, data)
+    handle(request, response, data, callback)
     {
         this.api.get(data.itemID, (err, data) => 
         {
-            if (!data)
-            { 
-                return { method: 'errorNotFound', data: { path: request.url } };
-            }
-            else
+            if (data)
             {
                 this.api.upload(request, data.itemID, (err, data) => 
                 {
                     response.writeHead(200, {});
                     response.end();
-                });
 
-                return null;
+                    callback();
+                });
+            }
+            else
+            {
+                callback(null, { method: 'errorNotFound', data: { path: request.url } });
             }
         });
     }
@@ -115,21 +115,23 @@ class WebdavResponseGet extends WebdavResponse
         this.api = api;
     }
 
-    handle(request, response, data)
+    handle(request, response, data, callback)
     {
         this.api.get(data.itemID, (err, data) => 
         {
+            logger.debug('callback with data: {{data}} and error: {{error}}', {data: data, error: err});
+
             if (data)
             { 
                 this.headers['filename'] = data.name;
                 this.headers['Content-Disposition'] = 'attachment; filename="{0}"'.format(data.name);
                 
                 this.api.download(data.contentID).pipe(response);
-                return null;
+                callback();
             }
             else
             {
-                return { method: 'errorNotFound', data: { path: request.url } };
+                callback(null, { method: 'errorNotFound', data: { path: request.url } });
             }
         });
     }
@@ -145,17 +147,17 @@ class WebdavResponsePropfind extends WebdavResponse
         this.collection = fs.readFileSync('./webdav/{0}/collection.xml'.format(name), 'utf8');
     }
 
-    handle(request, response, data)
+    handle(request, response, data, callback)
     {
         this.api.get(data.itemID, (err, data) => 
         {
             if (data)
             {
-                return super.handle(request, response, { key: data.id, item: data, depth: request.headers.depth });
+                super.handle(request, response, { key: data.id, item: data, depth: request.headers.depth }, callback);
             }
             else
             {
-                return { method: 'errorNotFound', data: { path: request.url } };
+                callback(null, { method: 'errorNotFound', data: { path: request.url } });
             }
         });
     }
@@ -165,9 +167,9 @@ class WebdavResponsePropfind extends WebdavResponse
         var fileTemplate = this.file;
         var collectionTemplate = this.collection;
 
-        if (data.depth == 0 || data.item.type != 'collection')
-            items.push(data.item);
-        else
+        items.push(data.item);
+
+        if (data.item.type == 'collection')
             items = items.concat(this.api.getChildren(data.item.key));
 
         var content = '';
@@ -199,34 +201,35 @@ class WebdavResponseProppatch extends WebdavResponse
         this.api = api;
     }
 
-    handle(request, response, data)
+    handle(request, response, data, callback)
     {
-         this.api.get(data.itemID, (err, data) => 
-        {
-            if (!data)
-            { 
-                return { method: 'errorNotFound', data: { path: request.url } };
-            }
-            else
-            {
-                utils.stream.read(request, (error, data) => 
-                {
-                    if (error)
-                    {
-                        console.log('error reading stream: {{error}}', {error: error});
-                    }
-                    else
-                    {
-                        request.lastAccess = data.extract('<Z:Win32LastAccessTime>', '</Z:Win32LastAccessTime>');   
-                        request.lastModified = new Date(data.extract('<Z:Win32LastModifiedTime>', '</Z:Win32LastModifiedTime>'));   
+        super.handle(request, response, {path: request.path.pathname}, callback);
 
-                        return super.handle(request, response, { itemID: request.path.pathname });
-                    }
-                });
+        // last update user and time are already set at upload time so no need to update anything
+        // this.api.get(data.itemID, (err, data) => 
+        // {
+        //     if (data)
+        //     {
+        //         utils.stream.read(request, (err, data) => 
+        //         {
+        //             if (err)
+        //             {
+        //                 console.log('error reading stream: {{error}}', {error: err});
+        //             }
+        //             else
+        //             {
+        //                 request.lastAccess = data.extract('<Z:Win32LastAccessTime>', '</Z:Win32LastAccessTime>');   
+        //                 request.lastModified = new Date(data.extract('<Z:Win32LastModifiedTime>', '</Z:Win32LastModifiedTime>'));   
 
-                return null;
-            }
-        });
+        //                 super.handle(request, response, { itemID: request.path.pathname }, callback);
+        //             }
+        //         });
+        //     }
+        //     else
+        //     { 
+        //         return { method: 'errorNotFound', data: { path: request.url } };
+        //     }
+        // });
     }
 }
 
@@ -246,18 +249,29 @@ module.exports = function (contentAPI)
         proppatch: new WebdavResponseProppatch('proppatch', contentAPI),
         patch: new WebdavResponseProppatch('proppatch', contentAPI),
 
-        handle: function (request, response, data)
+        handle: function (request, response, callback, method, data)
         {
-            data = data || {};
-            data.itemID = request.parameters.id;
-            var next = { data: data, method: request.method.toLowerCase() };
+            method = method || request.method.toLowerCase();
+            data = data || { itemID: request.parameters.id }; 
 
-            while (next) 
+            if (this[method])
             {
-                next = this[next.method].handle(request, response, next.data);
+                this[method].handle(request, response, data, (err, next) => 
+                {
+                    if (err)
+                    {
+                        callback(err);
+                    }
+                    else if (next)
+                    {
+                        this.handle(request, response, callback, next.method, next.data);
+                    }
+                    else 
+                    {
+                        callback();
+                    }
+                });
             }
-
-            return true;
         }
     }
 }

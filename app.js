@@ -247,10 +247,14 @@ http.createServer(function (request, response)
     }
     else
     {
-        if (!webdav.handle(request, response))
+        webdav.handle(request, response, (err, data) => 
         {
-            response.end('Failed');
-        }
+            if (err)
+            {
+                logger.error('webdav error - {{error}}', {error:err});
+                response.end('Failed');
+            }
+        });
     }
 
 }).listen(config.server.port);
