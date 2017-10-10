@@ -209,7 +209,7 @@ contentAPI.headers = headers;
 http.createServer(function (request, response)
 {
     request.path = url.parse(request.url, true);
-    request.parameters = request.path.pathname.parseDelimiter('/', [null, 'root', 'id']);
+    request.parameters = request.path.pathname.parseDelimiter('/', [null, 'id', 'name']);
 
     logger.debug('==================== request ====================')
 
@@ -259,4 +259,5 @@ http.createServer(function (request, response)
 
 }).listen(config.server.port);
 
+logger.clear();
 logger.info('Server running at http://127.0.0.1:{0}/'.format(config.server.port)); 

@@ -87,6 +87,11 @@ class Logger
             }
         }, wait);
     }
+    clear()
+    {
+        //console.clear();
+        fs.writeFileSync(this.path, '');
+    }
 }
 
 module.exports = function (name)

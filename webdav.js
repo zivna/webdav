@@ -117,16 +117,18 @@ class WebdavResponseGet extends WebdavResponse
 
     handle(request, response, data, callback)
     {
-        this.api.get(data.itemID, (err, data) => 
+        this.api.get(data.itemID, (err, file) => 
         {
-            logger.debug('callback with data: {{data}} and error: {{error}}', {data: data, error: err});
+            logger.debug('callback with file: {{file}} and error: {{error}}', {file: file, error: err});
 
-            if (data)
+            if (file)
             { 
-                this.headers['filename'] = data.name;
-                this.headers['Content-Disposition'] = 'attachment; filename="{0}"'.format(data.name);
+                this.headers['filename'] = file.name;
+                this.headers['Content-Disposition'] = 'attachment; filename="{0}"'.format(file.name);
+
+                super.setHeaders(request, response, {size:file.size, content:file.content});
                 
-                this.api.download(data.contentID).pipe(response);
+                this.api.download(file.contentID).pipe(response);
                 callback();
             }
             else
@@ -149,11 +151,11 @@ class WebdavResponsePropfind extends WebdavResponse
 
     handle(request, response, data, callback)
     {
-        this.api.get(data.itemID, (err, data) => 
+        this.api.get(data.itemID, (err, file) => 
         {
             if (data)
             {
-                super.handle(request, response, { key: data.id, item: data, depth: request.headers.depth }, callback);
+                super.handle(request, response, { key: file.id, name: data.name, item: file, depth: request.headers.depth }, callback);
             }
             else
             {
@@ -164,30 +166,39 @@ class WebdavResponsePropfind extends WebdavResponse
     renderBody(request, response, data)
     {
         var items = [];
+        var content = '';
         var fileTemplate = this.file;
         var collectionTemplate = this.collection;
 
-        items.push(data.item);
-
-        if (data.item.type == 'collection')
-            items = items.concat(this.api.getChildren(data.item.key));
-
-        var content = '';
-
-        items.forEach(function (item) 
+        if (data.name)
         {
-            logger.debug('adding {{item}}', { item: item });
+            content = fileTemplate.formatWith(data.item);    
+        }
+        else
+        {
+            content = collectionTemplate.formatWith(data.item);    
+        }
 
-            switch (item.type)
-            {
-                case 'file':
-                    content += fileTemplate.formatWith(item);
-                    break;
-                case 'collection':
-                    content += collectionTemplate.formatWith(item);
-                    break;
-            }
-        });
+
+        //items.push(data.item);
+
+        // if (data.item.type == 'collection' && data.depth == "1")
+        //     items = items.concat(this.api.getChildren(data.item.key));
+
+        // items.forEach(function (item) 
+        // {
+        //     logger.debug('adding {{item}}', { item: item });
+
+        //     switch (item.type)
+        //     {
+        //         case 'file':
+        //             content += fileTemplate.formatWith(item);
+        //             break;
+        //         case 'collection':
+        //             content += collectionTemplate.formatWith(item);
+        //             break;
+        //     }
+        // });
 
         return this.body.formatWith({ content: content });
     }
@@ -252,7 +263,7 @@ module.exports = function (contentAPI)
         handle: function (request, response, callback, method, data)
         {
             method = method || request.method.toLowerCase();
-            data = data || { itemID: request.parameters.id }; 
+            data = data || { itemID: request.parameters.id, name: request.parameters.name }; 
 
             if (this[method])
             {
