@@ -2,17 +2,7 @@ var http = require('http');
 var utils = require('./utils.js');
 var logger = require('./logger.js')('default');
 
-var backendURL = '101.1.156.205';
-
-var items = {
-    '/': { key: '/', name: 'root', type: 'collection', size: 0, modified: new Date(1980, 8, 13) },
-    '/child-folder': { key: '/child-folder', name: 'child-folder', type: 'collection', size: 0, modified: 'Mon, 03 Jul 2017 12:29:26 +0300' },
-    '/child-folder/text.txt': { key: '/child-folder/text.txt', name: 'text.txt', type: 'file', size: 75, modified: 'Mon, 03 Jul 2017 12:29:26 +0300', content: 'text/plain; charset=utf-8' },
-    '/child-folder/123.docx': { key: '/child-folder/123.docx', name: '123.docx', type: 'file', size: 10418, modified: 'Mon, 03 Jul 2017 12:29:26 +0300', content: 'application/octet-stream' },
-    '/child-folder/jpg.jpg': { key: '/child-folder/jpg.jpg', name: 'jpg.jpg', type: 'file', size: 32172, modified: 'Mon, 03 Jul 2017 12:29:26 +0300', content: 'image/jpeg' },
-    '/child-folder/video.mp4': { key: '/child-folder/video.mp4', name: 'video.mp4', type: 'file', size: 32172, modified: 'Mon, 03 Jul 2017 12:29:26 +0300', content: 'video/mp4' },
-    '/child-folder/entities.xlsx': { key: '/child-folder/entities.xlsx', name: 'entities.xlsx', type: 'file', size: 102200, modified: 'Mon, 03 Jul 2017 12:29:26 +0300', content: 'application/octet-stream' }
-};
+var backendURL = '10.32.5.147';
 
 class File
 {
@@ -24,6 +14,7 @@ class File
         this.type = 'file';
         this.key = source.wsBaseObjectEntity.id;
         this.name = source.wsBaseObjectEntity.name;
+        this.format = source.wsBaseObjectEntity.format;
         this.size = source.wsBaseObjectEntity.size || 0;
         this.contentID = source.wsBaseObjectEntity.contentID;
         this.modified = source.wsBaseObjectEntity.updated.timestamp;
@@ -94,9 +85,9 @@ var api = {
     },
     download: function (key, callback)
     {
-        logger.debug('downloading stream');
+        logger.debug('downloading stream - ' + key);
 
-        return utils.get('http://{0}:12050/contentManagement/File/{1}/content'.format(backendURL, 'FI2'), (error, response, body) => 
+        return utils.get('http://{0}:12050/contentManagement/File/{1}/content'.format(backendURL, key), (error, response, body) => 
         {
             if (!callback) return;
 

@@ -123,12 +123,12 @@ class WebdavResponseGet extends WebdavResponse
 
             if (file)
             { 
-                this.headers['filename'] = file.name;
-                this.headers['Content-Disposition'] = 'attachment; filename="{0}"'.format(file.name);
+                this.headers['filename'] = '{0}.{1}'.format(file.name, file.format);
+                this.headers['Content-Disposition'] = 'attachment; filename="{0}.{1}"'.format(file.name, file.format);
 
                 super.setHeaders(request, response, {size:file.size, content:file.content});
                 
-                this.api.download(file.contentID).pipe(response);
+                this.api.download(file.key).pipe(response);
                 callback();
             }
             else

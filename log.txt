@@ -1,148 +1,303 @@
-(2017/10/10 14:28:57) INFO:Server running at http://127.0.0.1:8082/
-(2017/10/10 14:29:01) DEBUG:==================== request ====================
-(2017/10/10 14:29:01) DEBUG:method: PROPFIND
-(2017/10/10 14:29:01) DEBUG:url: /FI1/text.txt
-(2017/10/10 14:29:01) DEBUG:path: /FI1/text.txt
-(2017/10/10 14:29:01) DEBUG:parameters: {"id":"FI1","name":"text.txt"}
-(2017/10/10 14:29:01) DEBUG:headers: {"connection":"Keep-Alive","user-agent":"Microsoft-WebDAV-MiniRedir/6.1.7601","depth":"0","translate":"f","content-length":"0","host":"localhost:8082"}
-(2017/10/10 14:29:01) DEBUG:fetching file
-(2017/10/10 14:29:02) DEBUG:fetching file complete (200)
-(2017/10/10 14:29:02) DEBUG:file found 
-(2017/10/10 14:29:02) DEBUG:==================== response ====================
-(2017/10/10 14:29:02) DEBUG:headers: {"access-control-allow-credentials":true,"access-control-allow-headers":["accept","accept-charset","accept-encoding","accept-language","authorization","content-length","content-type","host","origin","proxy-connection","referer","user-agent","x-requested-with"],"access-control-allow-methods":["GET","HEAD","PUT","POST","DELETE","TRACE","OPTIONS","CONNECT","PATCH","PROPFIND","PROPPATCH","MKCOL","COPY","MOVE","LOCK","UNLOCK","VERSION-CONTROL","REPORT","CHECKOUT","CHECKIN","UNCHECKOUT","MKWORKSPACE","UPDATE","LABEL","MERGE","BASELINE-CONTROL","MKACTIVITY","GETLIB"],"access-control-allow-origin":"*","access-control-max-age":"86400","connection":"keep-alive","dav":["1","3","extended-mkcol","2"],"date":"\"2017-10-10T11:29:02.132Z\"","transfer-encoding":"chunked","content-type":"application/xml; charset=utf-8","vary":["Brief","Prefer"]}
-(2017/10/10 14:29:02) DEBUG:body: <?xml version="1.0" encoding="utf-8"?>
-<d:multistatus xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
-    <d:response>
-    <d:href>/FI1/text.txt</d:href>
-    <d:propstat>
-        <d:prop>
-            <d:getlastmodified xmlns:b="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/" b:dt="dateTime.rfc1123">Mon, 03 Jul 2017 12:29:26 +0300</d:getlastmodified>
-            <d:getcontentlength>0</d:getcontentlength>
-            <d:resourcetype></d:resourcetype>
-            <d:getcontenttype>application/octet-stream</d:getcontenttype>
-        </d:prop>
-        <d:status>HTTP/1.1 200 OK</d:status>
-    </d:propstat>
-</d:response>
-</d:multistatus>
-(2017/10/10 14:29:02) DEBUG:==================== request ====================
-(2017/10/10 14:29:02) DEBUG:method: PROPFIND
-(2017/10/10 14:29:02) DEBUG:url: /FI1
-(2017/10/10 14:29:02) DEBUG:path: /FI1
-(2017/10/10 14:29:02) DEBUG:parameters: {"id":"FI1"}
-(2017/10/10 14:29:02) DEBUG:headers: {"connection":"Keep-Alive","user-agent":"Microsoft-WebDAV-MiniRedir/6.1.7601","depth":"0","translate":"f","content-length":"0","host":"localhost:8082"}
-(2017/10/10 14:29:02) DEBUG:fetching file
-(2017/10/10 14:29:02) DEBUG:fetching file complete (200)
-(2017/10/10 14:29:02) DEBUG:file found 
-(2017/10/10 14:29:02) DEBUG:==================== response ====================
-(2017/10/10 14:29:02) DEBUG:headers: {"access-control-allow-credentials":true,"access-control-allow-headers":["accept","accept-charset","accept-encoding","accept-language","authorization","content-length","content-type","host","origin","proxy-connection","referer","user-agent","x-requested-with"],"access-control-allow-methods":["GET","HEAD","PUT","POST","DELETE","TRACE","OPTIONS","CONNECT","PATCH","PROPFIND","PROPPATCH","MKCOL","COPY","MOVE","LOCK","UNLOCK","VERSION-CONTROL","REPORT","CHECKOUT","CHECKIN","UNCHECKOUT","MKWORKSPACE","UPDATE","LABEL","MERGE","BASELINE-CONTROL","MKACTIVITY","GETLIB"],"access-control-allow-origin":"*","access-control-max-age":"86400","connection":"keep-alive","dav":["1","3","extended-mkcol","2"],"date":"\"2017-10-10T11:29:02.186Z\"","transfer-encoding":"chunked","content-type":"application/xml; charset=utf-8","vary":["Brief","Prefer"]}
-(2017/10/10 14:29:02) DEBUG:body: <?xml version="1.0" encoding="utf-8"?>
-<d:multistatus xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
-   <d:response>
-    <d:href>/FI1/</d:href>
-    <d:propstat>
-        <d:prop>
-            <d:getlastmodified xmlns:b="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/" b:dt="dateTime.rfc1123">Mon, 03 Jul 2017 12:29:26 +0300</d:getlastmodified>
-            <d:resourcetype>
-                <d:collection/>
-            </d:resourcetype>
-            <d:quota-used-bytes>0</d:quota-used-bytes>
-            <d:quota-available-bytes>0</d:quota-available-bytes>
-        </d:prop>
-        <d:status>HTTP/1.1 200 OK</d:status>
-    </d:propstat>
-</d:response>
-</d:multistatus>
-(2017/10/10 14:29:02) DEBUG:==================== request ====================
-(2017/10/10 14:29:02) DEBUG:method: PROPFIND
-(2017/10/10 14:29:02) DEBUG:url: /FI1
-(2017/10/10 14:29:02) DEBUG:path: /FI1
-(2017/10/10 14:29:02) DEBUG:parameters: {"id":"FI1"}
-(2017/10/10 14:29:02) DEBUG:headers: {"connection":"Keep-Alive","user-agent":"Microsoft-WebDAV-MiniRedir/6.1.7601","depth":"0","translate":"f","content-length":"0","host":"localhost:8082"}
-(2017/10/10 14:29:02) DEBUG:fetching file
-(2017/10/10 14:29:02) DEBUG:fetching file complete (200)
-(2017/10/10 14:29:02) DEBUG:file found 
-(2017/10/10 14:29:02) DEBUG:==================== response ====================
-(2017/10/10 14:29:02) DEBUG:headers: {"access-control-allow-credentials":true,"access-control-allow-headers":["accept","accept-charset","accept-encoding","accept-language","authorization","content-length","content-type","host","origin","proxy-connection","referer","user-agent","x-requested-with"],"access-control-allow-methods":["GET","HEAD","PUT","POST","DELETE","TRACE","OPTIONS","CONNECT","PATCH","PROPFIND","PROPPATCH","MKCOL","COPY","MOVE","LOCK","UNLOCK","VERSION-CONTROL","REPORT","CHECKOUT","CHECKIN","UNCHECKOUT","MKWORKSPACE","UPDATE","LABEL","MERGE","BASELINE-CONTROL","MKACTIVITY","GETLIB"],"access-control-allow-origin":"*","access-control-max-age":"86400","connection":"keep-alive","dav":["1","3","extended-mkcol","2"],"date":"\"2017-10-10T11:29:02.223Z\"","transfer-encoding":"chunked","content-type":"application/xml; charset=utf-8","vary":["Brief","Prefer"]}
-(2017/10/10 14:29:02) DEBUG:body: <?xml version="1.0" encoding="utf-8"?>
-<d:multistatus xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
-   <d:response>
-    <d:href>/FI1/</d:href>
-    <d:propstat>
-        <d:prop>
-            <d:getlastmodified xmlns:b="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/" b:dt="dateTime.rfc1123">Mon, 03 Jul 2017 12:29:26 +0300</d:getlastmodified>
-            <d:resourcetype>
-                <d:collection/>
-            </d:resourcetype>
-            <d:quota-used-bytes>0</d:quota-used-bytes>
-            <d:quota-available-bytes>0</d:quota-available-bytes>
-        </d:prop>
-        <d:status>HTTP/1.1 200 OK</d:status>
-    </d:propstat>
-</d:response>
-</d:multistatus>
-(2017/10/10 14:29:02) DEBUG:==================== request ====================
-(2017/10/10 14:29:02) DEBUG:method: PROPFIND
-(2017/10/10 14:29:02) DEBUG:url: /FI1
-(2017/10/10 14:29:02) DEBUG:path: /FI1
-(2017/10/10 14:29:02) DEBUG:parameters: {"id":"FI1"}
-(2017/10/10 14:29:02) DEBUG:headers: {"connection":"Keep-Alive","user-agent":"Microsoft-WebDAV-MiniRedir/6.1.7601","depth":"0","translate":"f","content-length":"0","host":"localhost:8082"}
-(2017/10/10 14:29:02) DEBUG:fetching file
-(2017/10/10 14:29:02) DEBUG:fetching file complete (200)
-(2017/10/10 14:29:02) DEBUG:file found 
-(2017/10/10 14:29:02) DEBUG:==================== response ====================
-(2017/10/10 14:29:02) DEBUG:headers: {"access-control-allow-credentials":true,"access-control-allow-headers":["accept","accept-charset","accept-encoding","accept-language","authorization","content-length","content-type","host","origin","proxy-connection","referer","user-agent","x-requested-with"],"access-control-allow-methods":["GET","HEAD","PUT","POST","DELETE","TRACE","OPTIONS","CONNECT","PATCH","PROPFIND","PROPPATCH","MKCOL","COPY","MOVE","LOCK","UNLOCK","VERSION-CONTROL","REPORT","CHECKOUT","CHECKIN","UNCHECKOUT","MKWORKSPACE","UPDATE","LABEL","MERGE","BASELINE-CONTROL","MKACTIVITY","GETLIB"],"access-control-allow-origin":"*","access-control-max-age":"86400","connection":"keep-alive","dav":["1","3","extended-mkcol","2"],"date":"\"2017-10-10T11:29:02.252Z\"","transfer-encoding":"chunked","content-type":"application/xml; charset=utf-8","vary":["Brief","Prefer"]}
-(2017/10/10 14:29:02) DEBUG:body: <?xml version="1.0" encoding="utf-8"?>
-<d:multistatus xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
-   <d:response>
-    <d:href>/FI1/</d:href>
-    <d:propstat>
-        <d:prop>
-            <d:getlastmodified xmlns:b="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/" b:dt="dateTime.rfc1123">Mon, 03 Jul 2017 12:29:26 +0300</d:getlastmodified>
-            <d:resourcetype>
-                <d:collection/>
-            </d:resourcetype>
-            <d:quota-used-bytes>0</d:quota-used-bytes>
-            <d:quota-available-bytes>0</d:quota-available-bytes>
-        </d:prop>
-        <d:status>HTTP/1.1 200 OK</d:status>
-    </d:propstat>
-</d:response>
-</d:multistatus>
-(2017/10/10 14:29:02) DEBUG:==================== request ====================
-(2017/10/10 14:29:02) DEBUG:method: PROPFIND
-(2017/10/10 14:29:02) DEBUG:url: /FI1/text.txt
-(2017/10/10 14:29:02) DEBUG:path: /FI1/text.txt
-(2017/10/10 14:29:02) DEBUG:parameters: {"id":"FI1","name":"text.txt"}
-(2017/10/10 14:29:02) DEBUG:headers: {"connection":"Keep-Alive","user-agent":"Microsoft-WebDAV-MiniRedir/6.1.7601","depth":"0","translate":"f","content-length":"0","host":"localhost:8082"}
-(2017/10/10 14:29:02) DEBUG:fetching file
-(2017/10/10 14:29:02) DEBUG:fetching file complete (200)
-(2017/10/10 14:29:02) DEBUG:file found 
-(2017/10/10 14:29:02) DEBUG:==================== response ====================
-(2017/10/10 14:29:02) DEBUG:headers: {"access-control-allow-credentials":true,"access-control-allow-headers":["accept","accept-charset","accept-encoding","accept-language","authorization","content-length","content-type","host","origin","proxy-connection","referer","user-agent","x-requested-with"],"access-control-allow-methods":["GET","HEAD","PUT","POST","DELETE","TRACE","OPTIONS","CONNECT","PATCH","PROPFIND","PROPPATCH","MKCOL","COPY","MOVE","LOCK","UNLOCK","VERSION-CONTROL","REPORT","CHECKOUT","CHECKIN","UNCHECKOUT","MKWORKSPACE","UPDATE","LABEL","MERGE","BASELINE-CONTROL","MKACTIVITY","GETLIB"],"access-control-allow-origin":"*","access-control-max-age":"86400","connection":"keep-alive","dav":["1","3","extended-mkcol","2"],"date":"\"2017-10-10T11:29:02.282Z\"","transfer-encoding":"chunked","content-type":"application/xml; charset=utf-8","vary":["Brief","Prefer"]}
-(2017/10/10 14:29:02) DEBUG:body: <?xml version="1.0" encoding="utf-8"?>
-<d:multistatus xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
-    <d:response>
-    <d:href>/FI1/text.txt</d:href>
-    <d:propstat>
-        <d:prop>
-            <d:getlastmodified xmlns:b="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/" b:dt="dateTime.rfc1123">Mon, 03 Jul 2017 12:29:26 +0300</d:getlastmodified>
-            <d:getcontentlength>0</d:getcontentlength>
-            <d:resourcetype></d:resourcetype>
-            <d:getcontenttype>application/octet-stream</d:getcontenttype>
-        </d:prop>
-        <d:status>HTTP/1.1 200 OK</d:status>
-    </d:propstat>
-</d:response>
-</d:multistatus>
-(2017/10/10 14:29:02) DEBUG:==================== request ====================
-(2017/10/10 14:29:02) DEBUG:method: GET
-(2017/10/10 14:29:02) DEBUG:url: /FI1/text.txt
-(2017/10/10 14:29:02) DEBUG:path: /FI1/text.txt
-(2017/10/10 14:29:02) DEBUG:parameters: {"id":"FI1","name":"text.txt"}
-(2017/10/10 14:29:02) DEBUG:headers: {"cache-control":"no-cache","connection":"Keep-Alive","pragma":"no-cache","user-agent":"Microsoft-WebDAV-MiniRedir/6.1.7601","translate":"f","host":"localhost:8082"}
-(2017/10/10 14:29:02) DEBUG:fetching file
-(2017/10/10 14:29:02) DEBUG:fetching file complete (200)
-(2017/10/10 14:29:02) DEBUG:file found 
-(2017/10/10 14:29:02) DEBUG:callback with file: {"type":"file","key":"FI1","name":"text.txt","size":0,"contentID":"0fcd9247-4c9f-4be4-9f76-f52ca9f5332a","modified":"2017-10-09T16:06:47.960+0300","content":"application/octet-stream"} and error: null
-(2017/10/10 14:29:07) DEBUG:downloading stream
+(2017/10/10 15:38:13) INFO:Server running at http://127.0.0.1:8082/
+(2017/10/10 15:38:21) DEBUG:==================== request ====================
+(2017/10/10 15:38:21) DEBUG:method: GET
+(2017/10/10 15:38:21) DEBUG:url: /FI18
+(2017/10/10 15:38:21) DEBUG:path: /FI18
+(2017/10/10 15:38:21) DEBUG:parameters: {"id":"FI18"}
+(2017/10/10 15:38:21) DEBUG:headers: {"host":"10.32.5.148:8082","connection":"keep-alive","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","accept-encoding":"gzip, deflate, sdch","accept-language":"he-IL,he;q=0.8,en-US;q=0.6,en;q=0.4"}
+(2017/10/10 15:38:21) DEBUG:fetching file
+(2017/10/10 15:38:21) DEBUG:fetching file complete (200)
+(2017/10/10 15:38:21) DEBUG:file found 
+(2017/10/10 15:38:21) DEBUG:callback with file: {"type":"file","key":"FI18","name":"poop2000","format":"png","size":0,"contentID":"27d64f2b-5db8-40fb-a784-01d85d302cd0","modified":"2017-10-08T08:33:54.152+0000","content":"application/octet-stream"} and error: null
+(2017/10/10 15:38:21) DEBUG:downloading stream - FI18
+(2017/10/10 15:44:50) DEBUG:==================== request ====================
+(2017/10/10 15:44:50) DEBUG:method: GET
+(2017/10/10 15:44:50) DEBUG:url: /socket.io/?EIO=3&transport=polling&t=Ly6zS5x
+(2017/10/10 15:44:50) DEBUG:path: /socket.io/
+(2017/10/10 15:44:50) DEBUG:parameters: {"id":"socket.io","name":""}
+(2017/10/10 15:44:50) DEBUG:headers: {"cookie":"_ga=GA1.1.1871415801.1469962921; io=SUoKd8VHpLg8uUjZAABT","accept-language":"en-US,en;q=0.8","accept-encoding":"gzip, deflate, br","referer":"http://localhost:8080/","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36","origin":"http://localhost:8080","accept":"*/*","connection":"close","host":"127.0.0.1:5000"}
+(2017/10/10 15:44:50) DEBUG:fetching file
+(2017/10/10 15:44:50) DEBUG:fetching file complete (400)
+(2017/10/10 15:44:50) DEBUG:file not found - [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:44:50) DEBUG:callback with file: null and error: [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:44:50) DEBUG:==================== response ====================
+(2017/10/10 15:44:50) DEBUG:headers: {"access-control-allow-credentials":true,"access-control-allow-headers":["accept","accept-charset","accept-encoding","accept-language","authorization","content-length","content-type","host","origin","proxy-connection","referer","user-agent","x-requested-with"],"access-control-allow-methods":["GET","HEAD","PUT","POST","DELETE","TRACE","OPTIONS","CONNECT","PATCH","PROPFIND","PROPPATCH","MKCOL","COPY","MOVE","LOCK","UNLOCK","VERSION-CONTROL","REPORT","CHECKOUT","CHECKIN","UNCHECKOUT","MKWORKSPACE","UPDATE","LABEL","MERGE","BASELINE-CONTROL","MKACTIVITY","GETLIB"],"access-control-allow-origin":"*","access-control-max-age":"86400","connection":"keep-alive","date":"Tue, 04 Jul 2017 07:53:10 GMT","transfer-encoding":"chunked","content-type":"application/xml; charset=utf-8"}
+(2017/10/10 15:44:50) DEBUG:body: <?xml version="1.0" encoding="utf-8"?>
+<d:error xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
+    <a:exception>FileNotFound</a:exception>
+    <a:message>File at location /socket.io/?EIO=3&transport=polling&t=Ly6zS5x not found</a:message>
+</d:error>
+(2017/10/10 15:44:59) DEBUG:==================== request ====================
+(2017/10/10 15:44:59) DEBUG:method: GET
+(2017/10/10 15:44:59) DEBUG:url: /socket.io/?EIO=3&transport=polling&t=Ly6zUMW
+(2017/10/10 15:44:59) DEBUG:path: /socket.io/
+(2017/10/10 15:44:59) DEBUG:parameters: {"id":"socket.io","name":""}
+(2017/10/10 15:44:59) DEBUG:headers: {"cookie":"_ga=GA1.1.1871415801.1469962921; io=SUoKd8VHpLg8uUjZAABT","accept-language":"en-US,en;q=0.8","accept-encoding":"gzip, deflate, br","referer":"http://localhost:8080/","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36","origin":"http://localhost:8080","accept":"*/*","connection":"close","host":"127.0.0.1:5000"}
+(2017/10/10 15:44:59) DEBUG:fetching file
+(2017/10/10 15:44:59) DEBUG:fetching file complete (400)
+(2017/10/10 15:44:59) DEBUG:file not found - [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:44:59) DEBUG:callback with file: null and error: [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:44:59) DEBUG:==================== response ====================
+(2017/10/10 15:44:59) DEBUG:headers: {"access-control-allow-credentials":true,"access-control-allow-headers":["accept","accept-charset","accept-encoding","accept-language","authorization","content-length","content-type","host","origin","proxy-connection","referer","user-agent","x-requested-with"],"access-control-allow-methods":["GET","HEAD","PUT","POST","DELETE","TRACE","OPTIONS","CONNECT","PATCH","PROPFIND","PROPPATCH","MKCOL","COPY","MOVE","LOCK","UNLOCK","VERSION-CONTROL","REPORT","CHECKOUT","CHECKIN","UNCHECKOUT","MKWORKSPACE","UPDATE","LABEL","MERGE","BASELINE-CONTROL","MKACTIVITY","GETLIB"],"access-control-allow-origin":"*","access-control-max-age":"86400","connection":"keep-alive","date":"Tue, 04 Jul 2017 07:53:10 GMT","transfer-encoding":"chunked","content-type":"application/xml; charset=utf-8"}
+(2017/10/10 15:44:59) DEBUG:body: <?xml version="1.0" encoding="utf-8"?>
+<d:error xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
+    <a:exception>FileNotFound</a:exception>
+    <a:message>File at location /socket.io/?EIO=3&transport=polling&t=Ly6zUMW not found</a:message>
+</d:error>
+(2017/10/10 15:45:08) DEBUG:==================== request ====================
+(2017/10/10 15:45:08) DEBUG:method: GET
+(2017/10/10 15:45:08) DEBUG:url: /socket.io/?EIO=3&transport=polling&t=Ly6zWcS
+(2017/10/10 15:45:08) DEBUG:path: /socket.io/
+(2017/10/10 15:45:08) DEBUG:parameters: {"id":"socket.io","name":""}
+(2017/10/10 15:45:08) DEBUG:headers: {"cookie":"_ga=GA1.1.1871415801.1469962921; io=SUoKd8VHpLg8uUjZAABT","accept-language":"en-US,en;q=0.8","accept-encoding":"gzip, deflate, br","referer":"http://localhost:8080/","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36","origin":"http://localhost:8080","accept":"*/*","connection":"close","host":"127.0.0.1:5000"}
+(2017/10/10 15:45:08) DEBUG:fetching file
+(2017/10/10 15:45:08) DEBUG:fetching file complete (400)
+(2017/10/10 15:45:08) DEBUG:file not found - [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:45:08) DEBUG:callback with file: null and error: [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:45:08) DEBUG:==================== response ====================
+(2017/10/10 15:45:08) DEBUG:headers: {"access-control-allow-credentials":true,"access-control-allow-headers":["accept","accept-charset","accept-encoding","accept-language","authorization","content-length","content-type","host","origin","proxy-connection","referer","user-agent","x-requested-with"],"access-control-allow-methods":["GET","HEAD","PUT","POST","DELETE","TRACE","OPTIONS","CONNECT","PATCH","PROPFIND","PROPPATCH","MKCOL","COPY","MOVE","LOCK","UNLOCK","VERSION-CONTROL","REPORT","CHECKOUT","CHECKIN","UNCHECKOUT","MKWORKSPACE","UPDATE","LABEL","MERGE","BASELINE-CONTROL","MKACTIVITY","GETLIB"],"access-control-allow-origin":"*","access-control-max-age":"86400","connection":"keep-alive","date":"Tue, 04 Jul 2017 07:53:10 GMT","transfer-encoding":"chunked","content-type":"application/xml; charset=utf-8"}
+(2017/10/10 15:45:08) DEBUG:body: <?xml version="1.0" encoding="utf-8"?>
+<d:error xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
+    <a:exception>FileNotFound</a:exception>
+    <a:message>File at location /socket.io/?EIO=3&transport=polling&t=Ly6zWcS not found</a:message>
+</d:error>
+(2017/10/10 15:45:10) DEBUG:==================== request ====================
+(2017/10/10 15:45:10) DEBUG:method: GET
+(2017/10/10 15:45:10) DEBUG:url: /socket.io/?EIO=3&transport=polling&t=Ly6zX1J
+(2017/10/10 15:45:10) DEBUG:path: /socket.io/
+(2017/10/10 15:45:10) DEBUG:parameters: {"id":"socket.io","name":""}
+(2017/10/10 15:45:10) DEBUG:headers: {"cookie":"io=6txT1WCRnjAL_n00AABQ","accept-language":"en-US,en;q=0.8","accept-encoding":"gzip, deflate, br","referer":"http://localhost:8080/","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36","origin":"http://localhost:8080","accept":"*/*","connection":"close","host":"127.0.0.1:5000"}
+(2017/10/10 15:45:10) DEBUG:fetching file
+(2017/10/10 15:45:10) DEBUG:fetching file complete (400)
+(2017/10/10 15:45:10) DEBUG:file not found - [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:45:10) DEBUG:callback with file: null and error: [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:45:10) DEBUG:==================== response ====================
+(2017/10/10 15:45:10) DEBUG:headers: {"access-control-allow-credentials":true,"access-control-allow-headers":["accept","accept-charset","accept-encoding","accept-language","authorization","content-length","content-type","host","origin","proxy-connection","referer","user-agent","x-requested-with"],"access-control-allow-methods":["GET","HEAD","PUT","POST","DELETE","TRACE","OPTIONS","CONNECT","PATCH","PROPFIND","PROPPATCH","MKCOL","COPY","MOVE","LOCK","UNLOCK","VERSION-CONTROL","REPORT","CHECKOUT","CHECKIN","UNCHECKOUT","MKWORKSPACE","UPDATE","LABEL","MERGE","BASELINE-CONTROL","MKACTIVITY","GETLIB"],"access-control-allow-origin":"*","access-control-max-age":"86400","connection":"keep-alive","date":"Tue, 04 Jul 2017 07:53:10 GMT","transfer-encoding":"chunked","content-type":"application/xml; charset=utf-8"}
+(2017/10/10 15:45:10) DEBUG:body: <?xml version="1.0" encoding="utf-8"?>
+<d:error xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
+    <a:exception>FileNotFound</a:exception>
+    <a:message>File at location /socket.io/?EIO=3&transport=polling&t=Ly6zX1J not found</a:message>
+</d:error>
+(2017/10/10 15:45:15) DEBUG:==================== request ====================
+(2017/10/10 15:45:15) DEBUG:method: GET
+(2017/10/10 15:45:15) DEBUG:url: /socket.io/?EIO=3&transport=polling&t=Ly6zYIt
+(2017/10/10 15:45:15) DEBUG:path: /socket.io/
+(2017/10/10 15:45:15) DEBUG:parameters: {"id":"socket.io","name":""}
+(2017/10/10 15:45:15) DEBUG:headers: {"cookie":"io=6txT1WCRnjAL_n00AABQ","accept-language":"en-US,en;q=0.8","accept-encoding":"gzip, deflate, br","referer":"http://localhost:8080/","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36","origin":"http://localhost:8080","accept":"*/*","connection":"close","host":"127.0.0.1:5000"}
+(2017/10/10 15:45:15) DEBUG:fetching file
+(2017/10/10 15:45:15) DEBUG:fetching file complete (400)
+(2017/10/10 15:45:15) DEBUG:file not found - [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:45:15) DEBUG:callback with file: null and error: [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:45:15) DEBUG:==================== response ====================
+(2017/10/10 15:45:15) DEBUG:headers: {"access-control-allow-credentials":true,"access-control-allow-headers":["accept","accept-charset","accept-encoding","accept-language","authorization","content-length","content-type","host","origin","proxy-connection","referer","user-agent","x-requested-with"],"access-control-allow-methods":["GET","HEAD","PUT","POST","DELETE","TRACE","OPTIONS","CONNECT","PATCH","PROPFIND","PROPPATCH","MKCOL","COPY","MOVE","LOCK","UNLOCK","VERSION-CONTROL","REPORT","CHECKOUT","CHECKIN","UNCHECKOUT","MKWORKSPACE","UPDATE","LABEL","MERGE","BASELINE-CONTROL","MKACTIVITY","GETLIB"],"access-control-allow-origin":"*","access-control-max-age":"86400","connection":"keep-alive","date":"Tue, 04 Jul 2017 07:53:10 GMT","transfer-encoding":"chunked","content-type":"application/xml; charset=utf-8"}
+(2017/10/10 15:45:15) DEBUG:body: <?xml version="1.0" encoding="utf-8"?>
+<d:error xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
+    <a:exception>FileNotFound</a:exception>
+    <a:message>File at location /socket.io/?EIO=3&transport=polling&t=Ly6zYIt not found</a:message>
+</d:error>
+(2017/10/10 15:45:18) DEBUG:==================== request ====================
+(2017/10/10 15:45:18) DEBUG:method: GET
+(2017/10/10 15:45:18) DEBUG:url: /socket.io/?EIO=3&transport=polling&t=Ly6zYzV
+(2017/10/10 15:45:18) DEBUG:path: /socket.io/
+(2017/10/10 15:45:18) DEBUG:parameters: {"id":"socket.io","name":""}
+(2017/10/10 15:45:18) DEBUG:headers: {"cookie":"_ga=GA1.1.1871415801.1469962921; io=SUoKd8VHpLg8uUjZAABT","accept-language":"en-US,en;q=0.8","accept-encoding":"gzip, deflate, br","referer":"http://localhost:8080/","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36","origin":"http://localhost:8080","accept":"*/*","connection":"close","host":"127.0.0.1:5000"}
+(2017/10/10 15:45:18) DEBUG:fetching file
+(2017/10/10 15:45:18) DEBUG:fetching file complete (400)
+(2017/10/10 15:45:18) DEBUG:file not found - [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:45:18) DEBUG:callback with file: null and error: [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:45:18) DEBUG:==================== response ====================
+(2017/10/10 15:45:18) DEBUG:headers: {"access-control-allow-credentials":true,"access-control-allow-headers":["accept","accept-charset","accept-encoding","accept-language","authorization","content-length","content-type","host","origin","proxy-connection","referer","user-agent","x-requested-with"],"access-control-allow-methods":["GET","HEAD","PUT","POST","DELETE","TRACE","OPTIONS","CONNECT","PATCH","PROPFIND","PROPPATCH","MKCOL","COPY","MOVE","LOCK","UNLOCK","VERSION-CONTROL","REPORT","CHECKOUT","CHECKIN","UNCHECKOUT","MKWORKSPACE","UPDATE","LABEL","MERGE","BASELINE-CONTROL","MKACTIVITY","GETLIB"],"access-control-allow-origin":"*","access-control-max-age":"86400","connection":"keep-alive","date":"Tue, 04 Jul 2017 07:53:10 GMT","transfer-encoding":"chunked","content-type":"application/xml; charset=utf-8"}
+(2017/10/10 15:45:18) DEBUG:body: <?xml version="1.0" encoding="utf-8"?>
+<d:error xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
+    <a:exception>FileNotFound</a:exception>
+    <a:message>File at location /socket.io/?EIO=3&transport=polling&t=Ly6zYzV not found</a:message>
+</d:error>
+(2017/10/10 15:45:20) DEBUG:==================== request ====================
+(2017/10/10 15:45:20) DEBUG:method: GET
+(2017/10/10 15:45:20) DEBUG:url: /socket.io/?EIO=3&transport=polling&t=Ly6zZaT
+(2017/10/10 15:45:20) DEBUG:path: /socket.io/
+(2017/10/10 15:45:20) DEBUG:parameters: {"id":"socket.io","name":""}
+(2017/10/10 15:45:20) DEBUG:headers: {"cookie":"io=6txT1WCRnjAL_n00AABQ","accept-language":"en-US,en;q=0.8","accept-encoding":"gzip, deflate, br","referer":"http://localhost:8080/","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36","origin":"http://localhost:8080","accept":"*/*","connection":"close","host":"127.0.0.1:5000"}
+(2017/10/10 15:45:20) DEBUG:fetching file
+(2017/10/10 15:45:20) DEBUG:fetching file complete (400)
+(2017/10/10 15:45:20) DEBUG:file not found - [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:45:20) DEBUG:callback with file: null and error: [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:45:20) DEBUG:==================== response ====================
+(2017/10/10 15:45:20) DEBUG:headers: {"access-control-allow-credentials":true,"access-control-allow-headers":["accept","accept-charset","accept-encoding","accept-language","authorization","content-length","content-type","host","origin","proxy-connection","referer","user-agent","x-requested-with"],"access-control-allow-methods":["GET","HEAD","PUT","POST","DELETE","TRACE","OPTIONS","CONNECT","PATCH","PROPFIND","PROPPATCH","MKCOL","COPY","MOVE","LOCK","UNLOCK","VERSION-CONTROL","REPORT","CHECKOUT","CHECKIN","UNCHECKOUT","MKWORKSPACE","UPDATE","LABEL","MERGE","BASELINE-CONTROL","MKACTIVITY","GETLIB"],"access-control-allow-origin":"*","access-control-max-age":"86400","connection":"keep-alive","date":"Tue, 04 Jul 2017 07:53:10 GMT","transfer-encoding":"chunked","content-type":"application/xml; charset=utf-8"}
+(2017/10/10 15:45:20) DEBUG:body: <?xml version="1.0" encoding="utf-8"?>
+<d:error xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
+    <a:exception>FileNotFound</a:exception>
+    <a:message>File at location /socket.io/?EIO=3&transport=polling&t=Ly6zZaT not found</a:message>
+</d:error>
+(2017/10/10 15:47:03) DEBUG:==================== request ====================
+(2017/10/10 15:47:03) DEBUG:method: GET
+(2017/10/10 15:47:03) DEBUG:url: /graphql
+(2017/10/10 15:47:03) DEBUG:path: /graphql
+(2017/10/10 15:47:03) DEBUG:parameters: {"id":"graphql"}
+(2017/10/10 15:47:03) DEBUG:headers: {"cookie":"hsfirstvisit=http%3A%2F%2Flocalhost%3A5000%2F%23%2FDashboard|http%3A%2F%2Flocalhost%3A5000%2F|1483630829600; Webstorm-56e18ea8=493d7c08-e4ee-4d02-b76f-63b33c4c585f; __hstc=181257784.b79fea46f175a78534a993a53a512385.1483630829602.1484222448378.1484846671105.3; hubspotutk=b79fea46f175a78534a993a53a512385; _ga=GA1.1.2009945363.1483630829; Webstorm-56e19268=c5d4ab0d-fe83-436e-80fc-acbc90cdad9e","accept-language":"en-US,en;q=0.8","accept-encoding":"gzip, deflate, br","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36","connection":"close","host":"localhost:5000"}
+(2017/10/10 15:47:03) DEBUG:fetching file
+(2017/10/10 15:47:03) DEBUG:fetching file complete (400)
+(2017/10/10 15:47:03) DEBUG:file not found - [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"graphql"}]
+(2017/10/10 15:47:03) DEBUG:callback with file: null and error: [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"graphql"}]
+(2017/10/10 15:47:03) DEBUG:==================== response ====================
+(2017/10/10 15:47:03) DEBUG:headers: {"access-control-allow-credentials":true,"access-control-allow-headers":["accept","accept-charset","accept-encoding","accept-language","authorization","content-length","content-type","host","origin","proxy-connection","referer","user-agent","x-requested-with"],"access-control-allow-methods":["GET","HEAD","PUT","POST","DELETE","TRACE","OPTIONS","CONNECT","PATCH","PROPFIND","PROPPATCH","MKCOL","COPY","MOVE","LOCK","UNLOCK","VERSION-CONTROL","REPORT","CHECKOUT","CHECKIN","UNCHECKOUT","MKWORKSPACE","UPDATE","LABEL","MERGE","BASELINE-CONTROL","MKACTIVITY","GETLIB"],"access-control-allow-origin":"*","access-control-max-age":"86400","connection":"keep-alive","date":"Tue, 04 Jul 2017 07:53:10 GMT","transfer-encoding":"chunked","content-type":"application/xml; charset=utf-8"}
+(2017/10/10 15:47:03) DEBUG:body: <?xml version="1.0" encoding="utf-8"?>
+<d:error xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
+    <a:exception>FileNotFound</a:exception>
+    <a:message>File at location /graphql not found</a:message>
+</d:error>
+(2017/10/10 15:47:26) DEBUG:==================== request ====================
+(2017/10/10 15:47:26) DEBUG:method: GET
+(2017/10/10 15:47:26) DEBUG:url: /socket.io/?EIO=3&transport=polling&t=Ly6-2ES
+(2017/10/10 15:47:26) DEBUG:path: /socket.io/
+(2017/10/10 15:47:26) DEBUG:parameters: {"id":"socket.io","name":""}
+(2017/10/10 15:47:26) DEBUG:headers: {"cookie":"io=6txT1WCRnjAL_n00AABQ","accept-language":"en-US,en;q=0.8","accept-encoding":"gzip, deflate, br","referer":"http://localhost:8080/","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36","origin":"http://localhost:8080","accept":"*/*","connection":"close","host":"127.0.0.1:5000"}
+(2017/10/10 15:47:26) DEBUG:fetching file
+(2017/10/10 15:47:26) DEBUG:fetching file complete (400)
+(2017/10/10 15:47:26) DEBUG:file not found - [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:47:26) DEBUG:callback with file: null and error: [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:47:26) DEBUG:==================== response ====================
+(2017/10/10 15:47:26) DEBUG:headers: {"access-control-allow-credentials":true,"access-control-allow-headers":["accept","accept-charset","accept-encoding","accept-language","authorization","content-length","content-type","host","origin","proxy-connection","referer","user-agent","x-requested-with"],"access-control-allow-methods":["GET","HEAD","PUT","POST","DELETE","TRACE","OPTIONS","CONNECT","PATCH","PROPFIND","PROPPATCH","MKCOL","COPY","MOVE","LOCK","UNLOCK","VERSION-CONTROL","REPORT","CHECKOUT","CHECKIN","UNCHECKOUT","MKWORKSPACE","UPDATE","LABEL","MERGE","BASELINE-CONTROL","MKACTIVITY","GETLIB"],"access-control-allow-origin":"*","access-control-max-age":"86400","connection":"keep-alive","date":"Tue, 04 Jul 2017 07:53:10 GMT","transfer-encoding":"chunked","content-type":"application/xml; charset=utf-8"}
+(2017/10/10 15:47:26) DEBUG:body: <?xml version="1.0" encoding="utf-8"?>
+<d:error xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
+    <a:exception>FileNotFound</a:exception>
+    <a:message>File at location /socket.io/?EIO=3&transport=polling&t=Ly6-2ES not found</a:message>
+</d:error>
+(2017/10/10 15:47:27) DEBUG:==================== request ====================
+(2017/10/10 15:47:27) DEBUG:method: GET
+(2017/10/10 15:47:27) DEBUG:url: /socket.io/?EIO=3&transport=polling&t=Ly6-2So
+(2017/10/10 15:47:27) DEBUG:path: /socket.io/
+(2017/10/10 15:47:27) DEBUG:parameters: {"id":"socket.io","name":""}
+(2017/10/10 15:47:27) DEBUG:headers: {"cookie":"_ga=GA1.1.1871415801.1469962921; io=SUoKd8VHpLg8uUjZAABT","accept-language":"en-US,en;q=0.8","accept-encoding":"gzip, deflate, br","referer":"http://localhost:8080/","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36","origin":"http://localhost:8080","accept":"*/*","connection":"close","host":"127.0.0.1:5000"}
+(2017/10/10 15:47:27) DEBUG:fetching file
+(2017/10/10 15:47:27) DEBUG:fetching file complete (400)
+(2017/10/10 15:47:27) DEBUG:file not found - [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:47:27) DEBUG:callback with file: null and error: [{"message":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","messageTemplate":"{com.r39.ws.cns.common.icd.annotations.validation.WsID.message}","path":"ContentManagementServiceHandler.get.arg1","invalidValue":"socket.io"}]
+(2017/10/10 15:47:27) DEBUG:==================== response ====================
+(2017/10/10 15:47:27) DEBUG:headers: {"access-control-allow-credentials":true,"access-control-allow-headers":["accept","accept-charset","accept-encoding","accept-language","authorization","content-length","content-type","host","origin","proxy-connection","referer","user-agent","x-requested-with"],"access-control-allow-methods":["GET","HEAD","PUT","POST","DELETE","TRACE","OPTIONS","CONNECT","PATCH","PROPFIND","PROPPATCH","MKCOL","COPY","MOVE","LOCK","UNLOCK","VERSION-CONTROL","REPORT","CHECKOUT","CHECKIN","UNCHECKOUT","MKWORKSPACE","UPDATE","LABEL","MERGE","BASELINE-CONTROL","MKACTIVITY","GETLIB"],"access-control-allow-origin":"*","access-control-max-age":"86400","connection":"keep-alive","date":"Tue, 04 Jul 2017 07:53:10 GMT","transfer-encoding":"chunked","content-type":"application/xml; charset=utf-8"}
+(2017/10/10 15:47:27) DEBUG:body: <?xml version="1.0" encoding="utf-8"?>
+<d:error xmlns:d="DAV:" xmlns:a="http://ajax.org/2005/aml">
+    <a:exception>FileNotFound</a:exception>
+    <a:message>File at location /socket.io/?EIO=3&transport=polling&t=Ly6-2So not found</a:message>
+</d:error>
+(2017/10/10 15:47:30) DEBUG:==================== request ====================
+(2017/10/10 15:47:30) DEBUG:method: GET
+(2017/10/10 15:47:30) DEBUG:url: /FI1
+(2017/10/10 15:47:30) DEBUG:path: /FI1
+(2017/10/10 15:47:30) DEBUG:parameters: {"id":"FI1"}
+(2017/10/10 15:47:30) DEBUG:headers: {"cookie":"hsfirstvisit=http%3A%2F%2Flocalhost%3A5000%2F%23%2FDashboard|http%3A%2F%2Flocalhost%3A5000%2F|1483630829600; Webstorm-56e18ea8=493d7c08-e4ee-4d02-b76f-63b33c4c585f; __hstc=181257784.b79fea46f175a78534a993a53a512385.1483630829602.1484222448378.1484846671105.3; hubspotutk=b79fea46f175a78534a993a53a512385; _ga=GA1.1.2009945363.1483630829; Webstorm-56e19268=c5d4ab0d-fe83-436e-80fc-acbc90cdad9e","accept-language":"en-US,en;q=0.8","accept-encoding":"gzip, deflate, br","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36","connection":"close","host":"localhost:5000"}
+(2017/10/10 15:47:30) DEBUG:fetching file
+(2017/10/10 15:47:30) DEBUG:fetching file complete (200)
+(2017/10/10 15:47:30) DEBUG:file found 
+(2017/10/10 15:47:30) DEBUG:callback with file: {"type":"file","key":"FI1","name":"arc-bg","format":"png","size":0,"contentID":"0836770c-b648-4cc5-8f6c-c3c4aa5e57c3","modified":"2017-10-03T16:35:12.697+0000","content":"application/octet-stream"} and error: null
+(2017/10/10 15:47:30) DEBUG:downloading stream - FI1
+(2017/10/10 15:49:35) DEBUG:==================== request ====================
+(2017/10/10 15:49:35) DEBUG:method: GET
+(2017/10/10 15:49:35) DEBUG:url: /FI18
+(2017/10/10 15:49:35) DEBUG:path: /FI18
+(2017/10/10 15:49:35) DEBUG:parameters: {"id":"FI18"}
+(2017/10/10 15:49:35) DEBUG:headers: {"connection":"close","host":"localhost:8082","accept-encoding":"identity","accept":"*/*","user-agent":"Wget/1.17.1 (linux-gnu)"}
+(2017/10/10 15:49:35) DEBUG:fetching file
+(2017/10/10 15:49:35) DEBUG:fetching file complete (200)
+(2017/10/10 15:49:35) DEBUG:file found 
+(2017/10/10 15:49:35) DEBUG:callback with file: {"type":"file","key":"FI18","name":"poop2000","format":"png","size":0,"contentID":"27d64f2b-5db8-40fb-a784-01d85d302cd0","modified":"2017-10-08T08:33:54.152+0000","content":"application/octet-stream"} and error: null
+(2017/10/10 15:49:35) DEBUG:downloading stream - FI18
+(2017/10/10 15:50:10) DEBUG:==================== request ====================
+(2017/10/10 15:50:10) DEBUG:method: GET
+(2017/10/10 15:50:10) DEBUG:url: /FI18
+(2017/10/10 15:50:10) DEBUG:path: /FI18
+(2017/10/10 15:50:10) DEBUG:parameters: {"id":"FI18"}
+(2017/10/10 15:50:10) DEBUG:headers: {"user-agent":"Wget/1.17.1 (linux-gnu)","accept":"*/*","accept-encoding":"identity","host":"10.32.5.148:8082","connection":"Keep-Alive"}
+(2017/10/10 15:50:10) DEBUG:fetching file
+(2017/10/10 15:50:10) DEBUG:fetching file complete (200)
+(2017/10/10 15:50:10) DEBUG:file found 
+(2017/10/10 15:50:10) DEBUG:callback with file: {"type":"file","key":"FI18","name":"poop2000","format":"png","size":0,"contentID":"27d64f2b-5db8-40fb-a784-01d85d302cd0","modified":"2017-10-08T08:33:54.152+0000","content":"application/octet-stream"} and error: null
+(2017/10/10 15:50:10) DEBUG:downloading stream - FI18
+(2017/10/10 15:50:57) DEBUG:==================== request ====================
+(2017/10/10 15:50:57) DEBUG:method: GET
+(2017/10/10 15:50:57) DEBUG:url: /FI18
+(2017/10/10 15:50:57) DEBUG:path: /FI18
+(2017/10/10 15:50:57) DEBUG:parameters: {"id":"FI18"}
+(2017/10/10 15:50:57) DEBUG:headers: {"user-agent":"Wget/1.17.1 (linux-gnu)","accept":"*/*","accept-encoding":"identity","host":"10.32.5.148:8082","connection":"Keep-Alive"}
+(2017/10/10 15:50:57) DEBUG:fetching file
+(2017/10/10 15:50:57) DEBUG:fetching file complete (200)
+(2017/10/10 15:50:57) DEBUG:file found 
+(2017/10/10 15:50:57) DEBUG:callback with file: {"type":"file","key":"FI18","name":"poop2000","format":"png","size":0,"contentID":"27d64f2b-5db8-40fb-a784-01d85d302cd0","modified":"2017-10-08T08:33:54.152+0000","content":"application/octet-stream"} and error: null
+(2017/10/10 15:50:57) DEBUG:downloading stream - FI18
+(2017/10/10 15:52:57) DEBUG:==================== request ====================
+(2017/10/10 15:52:57) DEBUG:method: GET
+(2017/10/10 15:52:57) DEBUG:url: /FI18
+(2017/10/10 15:52:57) DEBUG:path: /FI18
+(2017/10/10 15:52:57) DEBUG:parameters: {"id":"FI18"}
+(2017/10/10 15:52:57) DEBUG:headers: {"host":"10.32.5.148:8082","connection":"keep-alive","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","accept-encoding":"gzip, deflate, sdch","accept-language":"he-IL,he;q=0.8,en-US;q=0.6,en;q=0.4"}
+(2017/10/10 15:52:57) DEBUG:fetching file
+(2017/10/10 15:52:57) DEBUG:fetching file complete (200)
+(2017/10/10 15:52:57) DEBUG:file found 
+(2017/10/10 15:52:57) DEBUG:callback with file: {"type":"file","key":"FI18","name":"poop2000","format":"png","size":0,"contentID":"27d64f2b-5db8-40fb-a784-01d85d302cd0","modified":"2017-10-08T08:33:54.152+0000","content":"application/octet-stream"} and error: null
+(2017/10/10 15:52:57) DEBUG:downloading stream - FI18
+(2017/10/10 15:53:46) DEBUG:==================== request ====================
+(2017/10/10 15:53:46) DEBUG:method: GET
+(2017/10/10 15:53:46) DEBUG:url: /FI18
+(2017/10/10 15:53:46) DEBUG:path: /FI18
+(2017/10/10 15:53:46) DEBUG:parameters: {"id":"FI18"}
+(2017/10/10 15:53:46) DEBUG:headers: {"host":"10.32.5.148:8082","user-agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8","accept-language":"en-US,en;q=0.5","accept-encoding":"gzip, deflate","connection":"keep-alive","upgrade-insecure-requests":"1"}
+(2017/10/10 15:53:46) DEBUG:fetching file
+(2017/10/10 15:53:46) DEBUG:fetching file complete (200)
+(2017/10/10 15:53:46) DEBUG:file found 
+(2017/10/10 15:53:46) DEBUG:callback with file: {"type":"file","key":"FI18","name":"poop2000","format":"png","size":0,"contentID":"27d64f2b-5db8-40fb-a784-01d85d302cd0","modified":"2017-10-08T08:33:54.152+0000","content":"application/octet-stream"} and error: null
+(2017/10/10 15:53:46) DEBUG:downloading stream - FI18
+(2017/10/10 15:53:54) DEBUG:==================== request ====================
+(2017/10/10 15:53:54) DEBUG:method: GET
+(2017/10/10 15:53:54) DEBUG:url: /FI17
+(2017/10/10 15:53:54) DEBUG:path: /FI17
+(2017/10/10 15:53:54) DEBUG:parameters: {"id":"FI17"}
+(2017/10/10 15:53:54) DEBUG:headers: {"host":"10.32.5.148:8082","user-agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8","accept-language":"en-US,en;q=0.5","accept-encoding":"gzip, deflate","connection":"keep-alive","upgrade-insecure-requests":"1"}
+(2017/10/10 15:53:54) DEBUG:fetching file
+(2017/10/10 15:53:54) DEBUG:fetching file complete (200)
+(2017/10/10 15:53:54) DEBUG:file found 
+(2017/10/10 15:53:54) DEBUG:callback with file: {"type":"file","key":"FI17","name":"hal","format":"png","size":0,"contentID":"0b9e5964-a143-4d9a-b241-b8cd463e0c02","modified":"2017-10-08T08:04:47.737+0000","content":"application/octet-stream"} and error: null
+(2017/10/10 15:53:54) DEBUG:downloading stream - FI17
+(2017/10/10 15:54:27) DEBUG:==================== request ====================
+(2017/10/10 15:54:27) DEBUG:method: GET
+(2017/10/10 15:54:27) DEBUG:url: /FI18
+(2017/10/10 15:54:27) DEBUG:path: /FI18
+(2017/10/10 15:54:27) DEBUG:parameters: {"id":"FI18"}
+(2017/10/10 15:54:27) DEBUG:headers: {"host":"10.32.5.148:8082","connection":"keep-alive","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","accept-encoding":"gzip, deflate, sdch","accept-language":"he-IL,he;q=0.8,en-US;q=0.6,en;q=0.4"}
+(2017/10/10 15:54:27) DEBUG:fetching file
+(2017/10/10 15:54:27) DEBUG:fetching file complete (200)
+(2017/10/10 15:54:27) DEBUG:file found 
+(2017/10/10 15:54:27) DEBUG:callback with file: {"type":"file","key":"FI18","name":"poop2000","format":"png","size":0,"contentID":"27d64f2b-5db8-40fb-a784-01d85d302cd0","modified":"2017-10-08T08:33:54.152+0000","content":"application/octet-stream"} and error: null
+(2017/10/10 15:54:27) DEBUG:downloading stream - FI18
+(2017/10/10 15:54:55) DEBUG:==================== request ====================
+(2017/10/10 15:54:55) DEBUG:method: GET
+(2017/10/10 15:54:55) DEBUG:url: /FI17
+(2017/10/10 15:54:55) DEBUG:path: /FI17
+(2017/10/10 15:54:55) DEBUG:parameters: {"id":"FI17"}
+(2017/10/10 15:54:55) DEBUG:headers: {"host":"10.32.5.148:8082","user-agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8","accept-language":"en-US,en;q=0.5","accept-encoding":"gzip, deflate","connection":"keep-alive","upgrade-insecure-requests":"1"}
+(2017/10/10 15:54:55) DEBUG:fetching file
+(2017/10/10 15:54:55) DEBUG:fetching file complete (200)
+(2017/10/10 15:54:55) DEBUG:file found 
+(2017/10/10 15:54:55) DEBUG:callback with file: {"type":"file","key":"FI17","name":"hal","format":"png","size":0,"contentID":"0b9e5964-a143-4d9a-b241-b8cd463e0c02","modified":"2017-10-08T08:04:47.737+0000","content":"application/octet-stream"} and error: null
+(2017/10/10 15:54:55) DEBUG:downloading stream - FI17
+(2017/10/10 15:55:23) DEBUG:==================== request ====================
+(2017/10/10 15:55:23) DEBUG:method: GET
+(2017/10/10 15:55:23) DEBUG:url: /FI18
+(2017/10/10 15:55:23) DEBUG:path: /FI18
+(2017/10/10 15:55:23) DEBUG:parameters: {"id":"FI18"}
+(2017/10/10 15:55:23) DEBUG:headers: {"host":"10.32.5.148:8082","user-agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8","accept-language":"en-US,en;q=0.5","accept-encoding":"gzip, deflate","connection":"keep-alive","upgrade-insecure-requests":"1"}
+(2017/10/10 15:55:23) DEBUG:fetching file
+(2017/10/10 15:55:23) DEBUG:fetching file complete (200)
+(2017/10/10 15:55:23) DEBUG:file found 
+(2017/10/10 15:55:23) DEBUG:callback with file: {"type":"file","key":"FI18","name":"poop2000","format":"png","size":0,"contentID":"27d64f2b-5db8-40fb-a784-01d85d302cd0","modified":"2017-10-08T08:33:54.152+0000","content":"application/octet-stream"} and error: null
+(2017/10/10 15:55:23) DEBUG:downloading stream - FI18
+(2017/10/10 15:56:21) DEBUG:==================== request ====================
+(2017/10/10 15:56:21) DEBUG:method: GET
+(2017/10/10 15:56:21) DEBUG:url: /FI17
+(2017/10/10 15:56:21) DEBUG:path: /FI17
+(2017/10/10 15:56:21) DEBUG:parameters: {"id":"FI17"}
+(2017/10/10 15:56:21) DEBUG:headers: {"host":"10.32.5.148:8082","connection":"keep-alive","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"en-US,en;q=0.8"}
+(2017/10/10 15:56:21) DEBUG:fetching file
+(2017/10/10 15:56:21) DEBUG:fetching file complete (200)
+(2017/10/10 15:56:21) DEBUG:file found 
+(2017/10/10 15:56:21) DEBUG:callback with file: {"type":"file","key":"FI17","name":"hal","format":"png","size":0,"contentID":"0b9e5964-a143-4d9a-b241-b8cd463e0c02","modified":"2017-10-08T08:04:47.737+0000","content":"application/octet-stream"} and error: null
+(2017/10/10 15:56:21) DEBUG:downloading stream - FI17
